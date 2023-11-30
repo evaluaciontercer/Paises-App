@@ -1,28 +1,30 @@
-/* Estilos para la barra de navegación y el cuerpo */
+/* Estilos generales para el cuerpo y la barra de navegación */
 body {
-    background-color: #ffffff;
-    /* Fondo claro */
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    /* Fondo con un degradado chulo */
     color: #333333;
     /* Texto oscuro */
+    overflow-y: auto;
 }
 
+/* Estilos para la barra de navegación con tema oscuro */
 nav {
-    background-color: #007bff;
-    /* Fondo azul */
+    background-color: #343a40;
+    /* Fondo oscuro */
     color: #ffffff;
     /* Texto blanco */
     padding: 15px;
 }
 
-a {
-    color: #007bff;
-    /* Enlaces azules */
-    text-decoration: none;
+h1 {
+    display: inline;
+    margin-right: 20px;
+    /* Ajusta el espacio entre el título y las opciones */
 }
 
 #offcanvasNavbar {
-    background-color: #007bff;
-    /* Fondo azul */
+    background-color: #343a40;
+    /* Fondo oscuro */
     color: #ffffff;
     /* Texto blanco */
 }
@@ -35,35 +37,40 @@ a {
 #offcanvasNavbar ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    /* Hace que los elementos de la lista se muestren en línea */
 }
 
 #offcanvasNavbar li {
-    margin-bottom: 10px;
+    margin-right: 20px;
+    /* Ajusta el espacio entre las opciones */
 }
 
 .botoneSinSesion,
 .botonesConSesion {
     color: #ffffff;
     text-decoration: none;
-    display: block;
     padding: 10px;
     transition: background-color 0.3s;
 }
 
 .botoneSinSesion:hover,
 .botonesConSesion:hover {
-    background-color: #0056b3;
+    background-color: #495057;
     /* Cambia el color de fondo al pasar el ratón */
 }
 
-/* Estilos para la lista de manualidades */
+/* Estilos para la lista de manualidades y el formulario de registro de manualidades */
 .custom-container {
-    margin-top: 18rem;
+    margin-top: 12rem;
+    margin-bottom: 5rem;
     background-color: #ffffff;
     /* Fondo claro */
     color: #333333;
     /* Texto oscuro */
     padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
 }
 
 .custom-row {
@@ -90,6 +97,7 @@ a {
     margin-bottom: 1rem;
     border: 1px solid #dee2e6;
     padding: 1rem;
+    border-radius: 5px;
 }
 
 .custom-list-group-item h5 {
@@ -122,21 +130,34 @@ a {
     opacity: 0.8;
 }
 
-/* Estilos para el formulario de registro de manualidades */
+/* Estilos para el formulario de registro de paises */
 #manualidad-form-container {
     background-color: #ffffff;
     /* Fondo claro */
     color: #333333;
     /* Texto oscuro */
     padding: 20px;
+    border: 1px solid #dee2e6;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 12rem;
+    overflow-y: scroll;
+    /* Añade un scroll vertical cuando sea necesario */
+    max-height: 70vh;
+    /* Limita la altura máxima del contenedor al 70% de la altura visible */
 }
 
-.custom-form-label {
-    color: #333333;
-    /* Texto oscuro */
+.contenedor-datos label {
+    font-weight: bold;
     font-size: 1.2rem;
+    margin-bottom: 10px;
+    display: block;
+    max-width: 100%;
+    /* Ajusta la anchura máxima de las etiquetas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Agrega puntos suspensivos (...) para indicar que el texto está truncado */
+    white-space: nowrap;
+    /* Evita que el texto se divida en múltiples líneas */
 }
 
 .custom-form-control {
@@ -148,12 +169,14 @@ a {
     border-radius: 5px;
     width: 100%;
     padding: 10px;
+    /* Ajustado el espacio interno */
     font-size: 1rem;
-}
-
-.custom-btn {
-    width: 100%;
-    margin-top: 10px;
+    /* Ajustado el tamaño de fuente */
+    margin-bottom: 15px;
+    max-width: 100%;
+    /* Ajusta la anchura máxima del campo de entrada */
+    box-sizing: border-box;
+    /* Incluye el borde y el relleno en la anchura total */
 }
 
 .custom-btn-primary {
@@ -164,13 +187,25 @@ a {
     border: none;
     border-radius: 5px;
     padding: 10px;
-    font-size: 1.2rem;
+    /* Ajustado el espacio interno */
+    font-size: 1rem;
+    /* Ajustado el tamaño de fuente */
 }
 
-.custom-btn-primary:hover {
-    background-color: #0056b3;
-    /* Cambia el color de fondo al pasar el ratón */
-    cursor: pointer;
+/* Estilos para el contenedor de datos */
+.contenedor-datos {
+    background-color: #f8f9fa;
+    /* Fondo claro */
+    color: #333333;
+    /* Texto oscuro */
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    /* Ajusta la anchura máxima del contenedor */
+    box-sizing: border-box;
+    /* Incluye el borde y el relleno en la anchura total */
 }
 
 /* Estilos responsivos */
